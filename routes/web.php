@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RohanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,26 +12,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
 
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
+// Home route
+Route::get('/', [RohanController::class, 'home'])->name('home');
 
-Route::get('/register', function () {
-    return view('register');
-})->name('register');
+// About route
+Route::get('/about', [RohanController::class, 'about'])->name('about');
 
-Route::get('/team', function () {
-    return view('team');
-})->name('team');
+// Login route
+Route::get('/login', [RohanController::class, 'login'])->name('login');
+// Register route
+Route::get('/register', [RohanController::class, 'register'])->name('register');
 
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+// Contact route
+Route::get('/contact', [RohanController::class, 'contact'])->name('contact');
+// Team route
+Route::get('/team', [RohanController::class, 'team'])->name('team');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
