@@ -11,7 +11,7 @@
   <div class="bg-white shadow-lg rounded-2xl w-full max-w-md p-8">
     <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">Login</h2>
 
-    <form action="#" method="POST" class="space-y-5">
+    <form class="space-y-5">
       <!-- Email -->
       <div>
         <label for="email" class="block text-gray-700 mb-2">Email</label>
