@@ -9,7 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-   public function up()
+ public function up(): void
 {
     Schema::create('collegues', function (Blueprint $table) {
         $table->id();
@@ -20,14 +20,10 @@ return new class extends Migration
         $table->string('gender');
         $table->string('address')->nullable();
         $table->string('department')->nullable();
-        $table->date('joining_date')->nullable();
         $table->string('position')->nullable();
-        $table->text('notes')->nullable();
-
         $table->timestamps();
     });
 }
-
 
     /**
      * Reverse the migrations.

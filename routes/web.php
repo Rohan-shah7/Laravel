@@ -12,6 +12,9 @@ use App\Http\Controllers\RohanController;
 |
 */
 
+use App\Http\Controllers\CollegueController;
+
+Route::get('/collegue', [CollegueController::class, 'showByPhone']);
 
 // Home route
 Route::get('/', [RohanController::class, 'home'])->name('home');
