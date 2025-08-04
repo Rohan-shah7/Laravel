@@ -5,18 +5,26 @@ use App\Http\Controllers\StudentController;
 
 
 
-Route::prefix('student')->controller(StudentController::class)->group(function () {
-    Route::get('ranjit', 'ranjit')->name('student.ranjit');
-    Route::get('salok', 'salok')->name('student.salok');
-    Route::get('rohan', 'rohan')->name('student.rohan');
-    Route::get('rupesh', 'rupesh')->name('student.rupesh');
-    Route::get('prabin', 'prabin')->name('student.prabin');
-    Route::get('suhana', 'suhana')->name('student.suhana');
-    Route::get('adish', 'adish')->name('student.adish');
-    Route::get('aman', 'aman')->name('student.aman');
-});
 
 
+Route::prefix('student')
+    ->name('student.')  // <-- route name prefix
+    ->controller(StudentController::class)
+    ->group(function () {
+        Route::get('ranjit', 'ranjit')->name('ranjit');
+        Route::get('salok', 'salok')->name('salok');
+
+        Route::get('rupesh', 'rupesh')->name('rupesh');
+        Route::get('prabin', 'prabin')->name('prabin');
+        Route::get('suhana', 'suhana')->name('suhana');
+        Route::get('adish', 'adish')->name('adish');
+        Route::get('aman', 'aman')->name('aman');
+
+         Route::get('rohan', 'rohan')
+            ->name('rohan')
+            ->middleware('rohanmiddleware');  // all lowercase, no backslash
+
+    });
 
 
 
