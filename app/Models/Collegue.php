@@ -9,10 +9,10 @@ class Collegue extends Model
 {
     use HasFactory;
 
-    // ✅ Table name (optional, Laravel auto-uses plural form "collegues")
+    //  Table name (optional, Laravel auto-uses plural form "collegues")
     protected $table = 'collegues';
 
-    // ✅ Allow mass assignment for these fields
+    //  Allow mass assignment for these fields
     protected $fillable = [
         'name',
         'email',

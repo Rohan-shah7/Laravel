@@ -29,8 +29,8 @@ Route::prefix('student')
 
 
 
- use App\Http\Controllers\CollegueController;
-use App\Http\Controllers\RohanController;
+//  use App\Http\Controllers\CollegueController;
+// use App\Http\Controllers\RohanController;
 
 //  Route::get('/collegue', [CollegueController::class, 'showByPhone']);
 
@@ -39,11 +39,13 @@ use App\Http\Controllers\RohanController;
 
 // // About route
 //  Route::get('/about', [RohanController::class, 'about'])->name('about');
+// //  Route::get('/about/integrity', [RohanController::class, 'about'])->name('about');
 
 // // Login route
 //  Route::get('/login', [RohanController::class, 'login'])->name('login');
 //  // Register route
 //  Route::get('/register', [RohanController::class, 'register'])->name('register');
+
 
 //  // Contact route
 //  Route::get('/contact', [RohanController::class, 'contact'])->name('contact');
